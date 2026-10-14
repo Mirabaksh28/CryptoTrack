@@ -1,0 +1,414 @@
+
+:root {
+  font-family: Inter, Arial, sans-serif;
+  color: #edf2ff;
+  background: #0b1020;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #0b1020;
+}
+
+button, input {
+  font: inherit;
+}
+
+.app {
+  width: min(1120px, 92%);
+  margin: auto;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
+  border-bottom: 1px solid #252d43;
+}
+
+.topbar h1 {
+  margin: 0;
+  font-size: 25px;
+}
+
+.topbar h1 span {
+  color: #8b8cff;
+}
+
+.network {
+  color: #b8c1d9;
+  border: 1px solid #303953;
+  border-radius: 30px;
+  padding: 9px 14px;
+  font-size: 13px;
+}
+
+.welcome {
+  padding: 38px 0 22px;
+}
+
+.eyebrow {
+  color: #9297ff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.welcome h2 {
+  margin: 12px 0;
+  font-size: clamp(27px, 5vw, 42px);
+}
+
+.welcome > p:last-child,
+.stat-card > span {
+  color: #9da9c5;
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin: 20px 0;
+}
+
+.stat-card, .panel {
+  background: #131a2d;
+  border: 1px solid #26304a;
+  border-radius: 16px;
+  padding: 23px;
+}
+
+.stat-card p {
+  margin-top: 0;
+  color: #b9c4dc;
+}
+
+.stat-card h2 {
+  font-size: 30px;
+  margin: 15px 0;
+  overflow-wrap: anywhere;
+}
+
+.stat-card > span {
+  font-size: 12px;
+}
+
+.panel {
+  margin: 20px 0;
+}
+
+.panel h2 {
+  margin-top: 0;
+  font-size: 19px;
+}
+
+.holding-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.holding-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  color: #b9c4dc;
+  font-size: 13px;
+}
+
+.holding-form input {
+  width: 100%;
+  padding: 12px;
+  color: white;
+  background: #0c1222;
+  border: 1px solid #303b56;
+  border-radius: 8px;
+  outline: none;
+}
+
+.holding-form input:focus {
+  border-color: #9297ff;
+}
+
+.holding-form button {
+  padding: 13px;
+  border: 0;
+  border-radius: 8px;
+  color: white;
+  background: #6865ec;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.holding-form button:hover {
+  background: #7774ff;
+}
+
+.table-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.table-heading > span {
+  color: #aab5d0;
+  font-size: 13px;
+}
+
+.table-scroll {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  white-space: nowrap;
+}
+
+th, td {
+  padding: 16px 12px;
+  border-bottom: 1px solid #29324a;
+}
+
+th {
+  color: #98a6c5;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+td {
+  font-size: 13px;
+}
+
+.symbol {
+  display: block;
+  margin-top: 5px;
+  color: #98a6c5;
+  font-size: 11px;
+}
+
+.remove {
+  background: transparent;
+  color: #ff919b;
+  border: 1px solid #633744;
+  border-radius: 6px;
+  padding: 7px 10px;
+  cursor: pointer;
+}
+
+.empty {
+  color: #aab5d0;
+  padding: 20px 0;
+}
+
+footer {
+  padding: 22px 0 35px;
+  color: #8290ad;
+  text-align: center;
+  font-size: 12px;
+}
+
+@media (max-width: 600px) {
+  .summary, .holding-form {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar h1 {
+    font-size: 21px;
+  }
+
+  .stat-card, .panel {
+    padding: 17px;
+  }
+}
+
+/* CryptoTrack text color fixes */
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  color: #edf2ff;
+}
+
+.app {
+  color: #edf2ff;
+}
+
+h1, h2, h3, strong {
+  color: #f8faff;
+}
+
+p {
+  color: #c1cbe0;
+}
+
+.stat-card p,
+.holding-form label {
+  color: #cbd5e8;
+}
+
+.stat-card h2 {
+  color: #a5a2ff;
+}
+
+.welcome h2 {
+  color: #ffffff;
+}
+
+.panel h2 {
+  color: #f8faff;
+}
+
+th {
+  color: #aab8d4;
+}
+
+td {
+  color: #e2e8f5;
+}
+
+.symbol,
+.stat-card > span {
+  color: #9daac5;
+}
+
+input {
+  color: #ffffff !important;
+  background-color: #0c1222 !important;
+}
+
+input::placeholder {
+  color: #7886a5 !important;
+}
+
+.table-heading > span {
+  color: #b6c2db;
+}
+
+.empty {
+  color: #b6c2db;
+}
+
+footer {
+  color: #929fbb;
+}
+
+/* Final CryptoTrack polish */
+
+.topbar {
+  gap: 20px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.wallet-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.wallet-info {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #aeb9d3;
+  font-size: 12px;
+  border: 1px solid #303953;
+  border-radius: 20px;
+  padding: 7px 11px;
+}
+
+.online-dot {
+  width: 7px;
+  height: 7px;
+  background: #63e6be;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(99, 230, 190, 0.7);
+}
+
+.connect-btn {
+  border: 0;
+  border-radius: 8px;
+  padding: 10px 15px;
+  color: white;
+  background: #6865ec;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.connect-btn:hover {
+  background: #7774ff;
+}
+
+.status-message {
+  margin: 10px 0 18px;
+  padding: 11px 14px;
+  border: 1px solid #303953;
+  border-radius: 9px;
+  background: #10172a;
+  color: #b9c4dc;
+  font-size: 13px;
+}
+
+.actions {
+  display: flex;
+  gap: 7px;
+}
+
+.update {
+  background: transparent;
+  color: #aaa7ff;
+  border: 1px solid #45427d;
+  border-radius: 6px;
+  padding: 7px 10px;
+  cursor: pointer;
+}
+
+.update:hover {
+  background: #1b1b3b;
+}
+
+.remove:hover {
+  background: #2a1820;
+}
+
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+@media (max-width: 700px) {
+  .topbar {
+    align-items: flex-start;
+  }
+
+  .brand {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 7px;
+  }
+
+  .wallet-area {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .wallet-info {
+    display: none;
+  }
+}
